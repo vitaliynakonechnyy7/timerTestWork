@@ -1,13 +1,108 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>TimerTestWork</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-  <app-root></app-root>
+
+<body class="mat-typography" >
+
+ <!--<div id="clock" style="margin:50px ;"></div>
+
+   <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      //
+
+      document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+      var t = setTimeout(function () { startTime() }, 500);
+    }
+
+  </script> -->
+
+  <button onclick="startCount(); toggleTextButton()" id="toggleText">Start</button>
+
+  <!-- <span id="second"> </span> -->
+  <!-- <span id="minutes"></span> -->
+  <!-- <span id="hours"></span> -->
+
+  <button onclick="resetCount()">Reset</button>
+
+  <script>
+    var x = document.getElementById("toggleText");
+    function toggleTextButton() {
+      if (x.innerHTML === "Start") {
+        x.innerHTML = "Stop";
+      } else {
+        x.innerHTML = "Start";
+        stopCount();
+      }
+    }
+
+
+    var count = 1;       // счет начинаем с 1
+    var time;           // переменная определяет промежуток в 1 сек
+    var timer_is_on = 0;// таймер выключен
+
+    //
+    function timedCount() {
+      // елемент секонд = сумме в переменной count
+      document.getElementById("second").innerHTML = count;
+      // каждый раз когда функ timedCount() выполняется к сущ счету +1
+      count = count + 1;
+      // перем time функция
+      time = setTimeout(timedCount, 1000);
+
+      if (counte === 60) {
+        
+        stopCount()
+}
+    }
+
+    function minutesCount() {
+if (counte = 60) {
+  document.getElementById("minutes").innerHTML = count;
+      } else {
+
+      }
+    }
+
+    function hoursCount() {
+
+
+}
+
+    function startCount() {
+      if (!timer_is_on) {
+        timer_is_on = 1;
+        timedCount();
+      }
+    }
+
+    function stopCount() {
+      clearTimeout(time);
+      timer_is_on = 0;
+    }
+
+    function resetCount() {
+      this.count = 0;
+      document.getElementById('second').innerHTML = 0;
+      stopCount();
+      x.innerHTML = "Start";
+    }
+
+  </script>
+
 </body>
+<app-root></app-root>
+
 </html>

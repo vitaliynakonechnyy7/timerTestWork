@@ -1,0 +1,47 @@
+.firstBlock{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+
+h2, #hours,#minutes,#second  {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+.card {
+  color:black;
+  max-width: 550px;
+  min-height: 250px;
+  background: rgba(111, 150, 190, 0.315);
+  backdrop-filter: blur(4px);
+  align-items: flex-end;
+  justify-content:center;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
+}
+
+.mat-button, .mat-flat-button{
+ margin: 5px;
+
+  align-items: flex-end;
+justify-content:space-around;
+}
+
+.buttonBloc{
+
+  margin-top: 50%;
+}
+
+.timer {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.4em;
+  letter-spacing: -1px;
+}
+.timer span {
+  font-size: 2em;
+  margin: 0px 3px 0px 15px;
+}
