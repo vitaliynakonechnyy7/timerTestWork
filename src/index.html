@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="mat-typography" >
+<body class="mat-typography">
 
- <!--<div id="clock" style="margin:50px ;"></div>
+  <!--<div id="clock" style="margin:50px ;"></div>
 
    <script>
     function startTime() {
@@ -63,23 +63,25 @@
       time = setTimeout(timedCount, 1000);
 
       if (counte === 60) {
-        
+
         stopCount()
-}
+      }
     }
 
     function minutesCount() {
-if (counte = 60) {
-  document.getElementById("minutes").innerHTML = count;
+      if (counte = 60) {
+        timer_is_on = 1;
+        timedCount();
       } else {
 
       }
     }
+    minutesCount()
 
     function hoursCount() {
 
 
-}
+    }
 
     function startCount() {
       if (!timer_is_on) {
